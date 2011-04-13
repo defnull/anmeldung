@@ -1,4 +1,13 @@
 Anmeldung::Application.routes.draw do
+  
+  match ':locale/users/status' => 'users#status', :as => :status
+  match ':locale/users/create' => 'users#create', :as => :create
+  match ':locale/users/conflict' => 'users#conflict', :as => :conflict
+  match ':locale/users/login' => 'users#login', :as => :login
+  match ':locale/users/forgotten' => 'users#forgotten', :as => :forgotten
+  match ':locale/hosts/create' => 'hosts#create', :as => :createhost
+  match ':locale/users/confirm' => 'users#confirm', :as => :confirm
+  match ':locale/' => 'users#index', :as => :index
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +57,7 @@ Anmeldung::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "users#index"
 
   # See how all your routes lay out with "rake routes"
 
