@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     
   end
 
-  def status
+  def condition
   	
   end
   
