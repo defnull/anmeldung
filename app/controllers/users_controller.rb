@@ -9,22 +9,9 @@ class UsersController < ApplicationController
   end
   
   def create
-  	
-  end
-  
-  def conflict
-  	
-  end
-  
-  def login
-  	
-  end
-  
-  def forgotten
-  	
-  end
-  
-  def confirm
-  	
+    respond_to do |format|
+      format.html { redirect_to confirm_url }
+      format.js {}
+    end
   end
 end

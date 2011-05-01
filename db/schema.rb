@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110413175538) do
+ActiveRecord::Schema.define(:version => 20110428224354) do
 
   create_table "flags", :force => true do |t|
     t.string   "species"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20110413175538) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ip_numeric", :default => 0, :null => false
   end
 
   create_table "users", :force => true do |t|
