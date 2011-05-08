@@ -72,3 +72,13 @@ de:
               blank: "Darf nicht leer sein!"
             email:
               blank: "Darf nicht leer sein!"
+  prelim:
+    title: "Bestätigungsseite"
+    why: "Warum sehe ich diese Seite?"
+    because: "Wir warten darauf, dass du deine E-Mail-Adresse bestätigst. Falls du den Link in der E-Mail nicht anclicken kannst, hast du hier die Möglichkeit die PIN manuell einzugeben. Außerdem kannst du hier deine persönlichen Angaben korrigieren und einen Neuversand der E-Mail anfordern."
+    your_info: "Deine Daten:"
+    enter_pin: "Gib deine PIN hier ein:"
+    pin: "PIN"
+    email_not_arrived: "Deine E-Mail ist nicht angekommen?"
+    check_your_data: "Bitte prüfe erst, ob deine Angaben oben korrekt sind. Ansonsten kannst du durch den unteren Link die E-Mail noch einmal versenden."
+    click_to_send_email: "Click hier, um die E-Mail noch einmal zu versenden!"

@@ -61,3 +61,13 @@ en:
     new_computer: "My old computer is gone/broken and I want to use this new computer instead."
     add_computer: "I want to use this computer in addition to my other computers."
     ip_adresses_exhausted: "All available IP addresses have been used up. Thus it is not possible to add new computers at the Moment. Please talk to the Internet Tutors."
+  prelim:
+    title: "Confirmation page"
+    why: "Why do I see this page?"
+    because: "We are still waiting for you to confirm your email address. In case you cannot click on the link in the email, you can also enter the PIN manually. If you entered some of your personal information incorrectly you also have the chance to correct the mistake - and resend the email if need be."
+    your_info: "Your info:"
+    enter_pin: "Enter your PIN here:"
+    pin: "PIN"
+    email_not_arrived: "Your email did not arrive?"
+    check_your_data: "Please check first if your personal information above is indeed correct. Then you can resend the email by clicking the link below."
+    click_to_send_email: "Click here to resend the email!"

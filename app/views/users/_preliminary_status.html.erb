@@ -1,1 +1,48 @@
-Preliminary
+<h1><%= t 'prelim.title' %></h1>
+<h2><%= t 'prelim.why' %></h2>
+<p><%= t 'prelim.because' %></p>
+<h2><%= t 'prelim.your_info' %></h2>
+<p>
+  <%= form_tag( update_url ) do -%>
+    <table>
+      <tr>
+        <td><%= t 'index.firstname' %></td>
+        <td><%= text_field_tag 'firstname', @host.user.firstname, :placeholder => t('index.firstname') %></td>
+      </tr>
+      <tr>
+        <td><%= t 'index.lastname' %></td>
+        <td><%= text_field_tag 'lastname', @host.user.lastname, :placeholder => t('index.lastname') %></td>
+      </tr>
+      <tr>
+        <td><%= t 'index.email' %></td>
+        <td><%= email_field_tag 'email', @host.user.email, :placeholder => t('index.email_suggestion'), :size => 40 %></td>
+      </tr>
+      <tr>
+        <td><%= t 'index.account' %></td>
+        <td><%= email_field_tag 'account', @host.user.account, :placeholder => t('index.account_suggestion'), :size => 40 %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= submit_tag t('index.submit') %></td>
+      </tr>
+    </table>
+  <% end -%>
+</p>
+<h2><%= t 'prelim.enter_pin' %></h2>
+<p>
+  <%= form_tag( confirm_url ) do -%>
+    <table>
+      <tr>
+        <td><%= t 'prelim.pin' %></td>
+        <td><%= number_field_tag 'pin', 0, :size => 8 %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= submit_tag t('index.submit') %></td>
+      </tr>
+    </table>
+  <% end -%>
+</p>
+<h2><%= t 'prelim.email_not_arrived' %></h2>
+<p>
+  <%= t 'prelim.check_your_data' %><br />
+  <%= link_to t('prelim.click_to_send_email') ,resend_url %>
+</p>
