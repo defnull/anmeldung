@@ -7,7 +7,7 @@ de:
     access_answer: "Wenn du diese Seite siehst, ist dein Computer bereits korrekt für den Zugang zum Internet konfiguriert. Bitte lies dir den folgenden Text sorgfältig durch, um vollen Zugang zum Internet zu bekommen:"
     access_answer_1: "Fülle das Formular unten vollständig aus. Achte vor allem auf eine"
     access_answer_2: "gültige E-Mail-Adresse!"
-    access_answer_3: "Nachdem deine Angaben akzeptiert wurden, bekommst du Zugriff auf Webseiten (d.h. Port 80) und E-Mail (d.h. Ports 25, 110, 143). Das bedeutet, dass Programme wie Firefox oder Opera und E-Mail Programme wie Outlook oder Thunderbird funktionieren werden, Programme wie Skype oder World of Warcraft jedoch nicht."
+    access_answer_3: "Nachdem deine Angaben akzeptiert wurden, bekommst du Zugriff auf Webseiten (d.h. Port 80, 443) und E-Mail (d.h. Ports 25, 110, 143). Das bedeutet, dass Programme wie Firefox oder Opera und E-Mail Programme wie Outlook oder Thunderbird funktionieren werden, Programme wie Skype oder World of Warcraft jedoch nicht."
     access_answer_4: "Du wirst dann eine E-Mail erhalten, welche einen anclickbaren Link enthält, den du tatsächlich anklicken solltest, um deine E-Mail-Adresse zu bestätigen (alternativ, falls das anklicken aus irgendeinem Grund nicht funktioniert, kannst du diese Seite wieder besuchen und die in der E-Mail angegebene PIN benutzen). Sobald die E-Mail-Adresse bestätigt wurde, bekommst du unbeschränkten Zugriff auf das gesamte Internet."
     did_already_question: "Aber das habe ich schon gemacht / Wie registriere ich einen neuen Computer?"
     did_already_answer: "Bitte lies dir die FAQ unterhalb des Formulars durch."
@@ -32,7 +32,43 @@ de:
     email_suggestion: "Dein.Name@Dein-E-Mail-Provider.de"
     house: "Hausnummer:"
     room: "Zimmernummer:"
-    guest_room: "Gästezimmer"
-    notquartier: "Notquartier"
-    appartment: "Appartment"
+    guest_room1: "Gästezimmer (Einzelzimmer)"
+    guest_room2: "Gästezimmer (Doppelzimmer)"
+    notquartier1: "Notquartier 1"
+    notquartier2: "Notquartier 2"
+    notquartier3: "Notquartier 3"
+    appartment1: "Einzelappartment 1"
     submit: "Absenden"
+    account_not_required: "(optionale Angabe)"
+    appartment2: "Einzelappartment 2"
+    wohnung1: "Wohnung 1"
+    wohnung2: "Wohnung 2"
+    faq_wrong_data_question: "Was passiert, wenn ich falsche Daten eingebe?"
+    faq_wrong_data_answer: "Wenn du aus Versehen falsche Daten eingegeben hast, gibt es mehrere Möglichkeiten:"
+    faq_wrong_data_email: "Falsche E-Mail-Adresse: Gib einfach die richtige E-Mail-Adresse auf der Bestätigungsseite ein."
+    faq_wrong_data_personal: "Falsche persönliche Angaben: Auch diese kannst du auf der Bestätigungs- oder der Statusseite ändern."
+    faq_wrong_data_address: "Falsche Adresse: Sprich mit den Internettutoren und entschuldige dich bei der Person, die du gerade vom Internet getrennt hast!"
+    faq_wrong_data_purpose: "Falls du absichtlich falsche Daten eingegeben hast: Wir finden das heraus. Und da dies einen Verstoß gegen die Nutzungsregeln darstellt, wirst du vom Internet getrennt. Permanent."
+  user:
+    adress:
+      not_a_valid_house_or_room_nr: "Haus- und Zimmernummer müssen gültig sein!"
+  conflict:
+    mistype: "Entschuldigung, ich habe die falsche Adresse angegeben!"
+    adress_in_use1: "Diese Adresse ist bereits durch folgende Person belegt: "
+    adress_in_use2: "Bitte wähle eine der Optionen aus, korrigiere eventuelle Fehler und sende dann das Formular erneut ab!"
+    new_resident: "Ich bin gerade in dieses Zimmer gezogen und bin ein neuer Mitbewohner."
+    old_resident: "Ich wohne hier immer noch und jemand hat mich als ausgezogen gemeldet!"
+    new_computer: "Mein alter Computer ist weg/kaputt und ich möchte jetzt diesen hier benutzen."
+    add_computer: "Ich möchte zusätzlich zu meinen anderen Computern diesen hier ebenfalls benutzen."
+    ip_adresses_exhausted: "Die für uns verfügbaren IP-Adressen sind verbraucht. Eine Anmeldung neuer Computer ist daher derzeit nicht möglich. Bitte wende dich an die Internettutoren."
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            firstname:
+              blank: "Darf nicht leer sein!"
+            lastname:
+              blank: "Darf nicht leer sein!"
+            email:
+              blank: "Darf nicht leer sein!"

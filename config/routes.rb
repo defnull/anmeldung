@@ -1,4 +1,7 @@
 Anmeldung::Application.routes.draw do
+  match ':locale/users/confirm' => 'users#confirm', :as => :confirm
+  match ':locale/users/conflict' => 'users#conflict', :as => :conflict
+  match ':locale/users/status' => 'users#condition', :as => :status
   match ':locale/users/create' => 'users#create', :as => :create
   match ':locale/' => 'users#index', :as => :index
   

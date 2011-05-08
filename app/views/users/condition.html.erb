@@ -1,0 +1,7 @@
+<% if @host.hostflag.flag.species == "preliminary" %>
+    <%= render :partial => 'preliminary_status' %>
+<% elsif @host.hostflag.flag.species == "valid" || @host.flag.species == "admin" %>
+    <%= render :partial => 'confirmed_status' %>
+<% elsif @host.hostflag.flag.species == "locked" %>
+    <%= render :partial => 'locked_status' %>
+<% end -%>
