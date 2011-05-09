@@ -1,3 +1,10 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+<% end %>
+<%= user_has_to_reboot %>
 <h1><%= t 'prelim.title' %></h1>
 <h2><%= t 'prelim.why' %></h2>
 <p><%= t 'prelim.because' %></p>
@@ -29,11 +36,11 @@
 </p>
 <h2><%= t 'prelim.enter_pin' %></h2>
 <p>
-  <%= form_tag( confirm_url ) do -%>
+  <%= form_tag( confirm_url(:pin => 'form') ) do -%>
     <table>
       <tr>
         <td><%= t 'prelim.pin' %></td>
-        <td><%= number_field_tag 'pin', 0, :size => 8 %></td>
+        <td><%= number_field_tag 'pin_form', 0, :size => 8 %></td>
       </tr>
       <tr>
         <td colspan="2"><%= submit_tag t('index.submit') %></td>

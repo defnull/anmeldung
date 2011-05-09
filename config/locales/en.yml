@@ -71,3 +71,20 @@ en:
     email_not_arrived: "Your email did not arrive?"
     check_your_data: "Please check first if your personal information above is indeed correct. Then you can resend the email by clicking the link below."
     click_to_send_email: "Click here to resend the email!"
+    you_have_to_get_a_new_ip_adress: "You have to acquire a new IP address!"
+    either_reboot_or_unplug: "To do so, either reboot your computer or unplug the network cable."
+  email:
+    welcome: "Welcome to the Rosenbachweg!"
+    resent: "The confirmation email has been re-sent!"
+  confirm:
+    correct_pin: "The PIN was correct!"
+    wrong_pin: "Sorry, wrong PIN!"
+    list_of_computers: "List of your computers:"
+    add_computer: "Add another computer:"
+    enter_mac_address: "Enter a MAC address:"
+  host:
+    adding_new_computer_not_possible_at_this_time: "It is not possible to add an additional computer at this time."
+    new_computer_added: "New computer successfully added."
+  locked:
+    you_are_locked: "Your internet access has been blocked!"
+    read_carefully: "Read the following carefully as it will tell you how to restore your internet access:"

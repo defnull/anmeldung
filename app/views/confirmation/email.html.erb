@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= t 'email.welcome' %></h1>
+    <p>
+      <%= t 'email.one_click_away' %>
+    </p>
+    <p>
+      <%= link_to t('email.click_me'), @confirm_url %>
+    </p>
+    <p>
+      <%= t 'email.your_pin_is' %>
+    </p>
+    <p>
+      <strong><%= @pin %></strong>
+    </p>
+  </body>
+</html>

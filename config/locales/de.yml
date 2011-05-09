@@ -82,3 +82,20 @@ de:
     email_not_arrived: "Deine E-Mail ist nicht angekommen?"
     check_your_data: "Bitte prüfe erst, ob deine Angaben oben korrekt sind. Ansonsten kannst du durch den unteren Link die E-Mail noch einmal versenden."
     click_to_send_email: "Click hier, um die E-Mail noch einmal zu versenden!"
+    you_have_to_get_a_new_ip_adress: "Du musst eine neue IP-Adresse erhalten!"
+    either_reboot_or_unplug: "Dafür musst du deinen Computer rebooten oder kurz das Netzwerkkabel rausziehen."
+  email:
+    welcome: "Willkommen im Rosenbachweg!"
+    resent: "Die Bestätigungs-E-Mail wurde erneut versendet!"
+  confirm:
+    correct_pin: "Die PIN wurde akzeptiert!"
+    wrong_pin: "Sorry, falsche PIN!"
+    list_of_computers: "Deine angemeldeten Computer:"
+    add_computer: "Ergänze einen weiteren Computer:"
+    enter_mac_address: "Gib eine MAC-Adresse ein:"
+  host:
+    adding_new_computer_not_possible_at_this_time: "Es ist zur Zeit nicht möglich, einen weiteren Computer hinzuzufügen."
+    new_computer_added: "Neuer Computer erfolgreich hinzugefügt."
+  locked:
+    you_are_locked: "Dein Internetzugriff ist gesperrt!"
+    read_carefully: "Lies das folgende sorgfältig, damit du erfährst, wie du den Internetzugang wieder herstellen kannst:"
