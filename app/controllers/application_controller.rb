@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   def get_remote_mac
-    (Rails.env == "production") ? `/sbin/ip neigh list dev eth2 | /bin/fgrep -w "#{request.remote_ip}" | /bin/egrep -o "[0-9a-fA-F:]{17}"` : '00:11:22:33:44:56'
+    (Rails.env == "production") ? `/sbin/ip neigh list dev eth2 | /bin/fgrep -w "#{request.remote_ip}" | /bin/egrep -o "[0-9a-fA-F:]{17}"` : '00:11:22:33:44:54'
   end
 
   private

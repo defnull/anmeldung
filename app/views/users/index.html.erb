@@ -22,7 +22,7 @@
                   <td colspan="3"><%= t 'conflict.adress_in_use2' %></td>
                 </tr>
                 <tr>
-                  <td colspan="3"><%= select_tag 'adress_conflict', options_for_select({t('conflict.mistype') => 'mistype', t('conflict.new_resident') => 'new_resident', t('conflict.old_resident') => 'old_resident' , t('conflict.new_computer') => 'new_computer', t('conflict.add_computer') => 'add_computer'}) %></td>
+                  <td colspan="3"><%= select_tag 'adress_conflict', options_for_select({t('conflict.mistype') => 'mistype', t('conflict.new_resident') => 'new_resident', t('conflict.new_computer') => 'new_computer', t('conflict.add_computer') => 'add_computer'}) %></td>
                 </tr>
             <% end -%>
             <% if @ip_exhausted %>
@@ -58,11 +58,8 @@
             <tr>
               <td><%= t 'index.room' %></td>
               <td <%= @user.errors[:adress].empty? ? '' : 'class=error' %>>
-                <%= radio_button_tag 'room_type', 'room', (params[:room_type]=='room' || params[:roomtype].nil?) %><%= number_field_tag 'room', params[:room].nil? ? 101 : params[:room], :min => 101, :max => 430, :size=> 3 %>
-                <%= radio_button_tag 'room_type', 'guest', (params[:room_type]=='guest') %><%= select_tag 'guest', options_for_select({t('index.guest_room1') => '1', t('index.guest_room2') => '2'}) %>
-                <%= radio_button_tag 'room_type', 'not', (params[:room_type]=='not') %><%= select_tag 'not', options_for_select({t('index.notquartier1') => '1', t('index.notquartier2') => '2', t('index.notquartier3') => '3'}) %>
-                <%= radio_button_tag 'room_type', 'app', (params[:room_type]=='app') %><%= select_tag 'app', options_for_select({t('index.appartment1') => '1', t('index.appartment2') => '2'}) %>
-                <%= radio_button_tag 'room_type', 'wohn', (params[:room_type]=='wohn') %><%= select_tag 'wohn', options_for_select({t('index.wohnung1') => '1', t('index.wohnung2') => '2'}) %>
+                <%= number_field_tag 'room', params[:room].nil? ? 0 : params[:room], :min => 0, :max => 430, :size=> 3 %> <strong><%=  t 'index.or' %></strong>
+                <%= select_tag 'special_room', options_for_select({'---------------------------------------' => 'norm_0', t('index.guest_room1') => 'guest_1', t('index.guest_room2') => 'guest_2',t('index.notquartier1') => 'not_1', t('index.notquartier2') => 'not_2', t('index.notquartier3') => 'not_3',t('index.appartment1') => 'app_1', t('index.appartment2') => 'app_2',t('index.wohnung1') => 'wohn_1', t('index.wohnung2') => 'wohn_2'}) %>
               </td>
             </tr>
             <tr>

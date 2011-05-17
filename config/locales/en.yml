@@ -49,6 +49,7 @@ en:
     faq_wrong_data_personal: "Wrong personal data: You can change that on the confirmation screen or the status screen as well."
     faq_wrong_data_address: "Wrong address: Talk to the internet tutors and apologize to the person you just disconnected!"
     faq_wrong_data_purpose: "If you entered wrong data on purpose: We will find out. And since that behaviour is a breach of policy, you will be disconnected from the internet. Permanently."
+    or: "OR"
   user:
     adress:
       not_a_valid_house_or_room_nr: "House and room number have to be valid!"
@@ -76,6 +77,10 @@ en:
   email:
     welcome: "Welcome to the Rosenbachweg!"
     resent: "The confirmation email has been re-sent!"
+    one_click_away: "Your internet access is only one click away!"
+    click_me: "Click me!"
+    your_pin_is: "Your PIN is:"
+    need_to_return_to_the_main_page_question: "If you ever need to add another computer or correct your personal information, use the link below:"
   confirm:
     correct_pin: "The PIN was correct!"
     wrong_pin: "Sorry, wrong PIN!"

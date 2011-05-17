@@ -19,13 +19,13 @@ class UsersController < ApplicationController
     mac = get_remote_mac
     @host = Host.find_by_mac(mac)
     redirect_to index_url if @host.nil?
-    pin = (params[:pin] == "form") ? params[:pin_form].to_i : params[:pin].to_i
+    pin = (params[:pin] == 'form') ? params[:pin_form].to_i : params[:pin].to_i
     if pin == @host.user.pin
       flash[:notice] = t('confirm.correct_pin')
       flag = Flag.find_by_species('valid')
       user = @host.user
       user.hosts.each do |host|
-        if host.hostflag.flag.species = "preliminary"
+        if host.hostflag.flag.species = 'preliminary'
           host.hostflag.flag=(flag)
           host.hostflag.save
         end
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
   def create
     mac = get_remote_mac
     @user = User.new(:firstname => params[:firstname], :lastname => params[:lastname], :email => params[:email], :account => params[:account], :pin => rand(1000000))
-    @user.assemble_adress(params[:house],params[:room_type],params[:room],params[:guest],params[:app],params[:not],params[:wohn])
+    @user.assemble_adress(params[:house],params[:room],params[:special_room])
 
     @host = Host.new(:mac => mac, :hostname => sprintf("%s_%d",(@user.adress.nil?) ? '' : @user.adress.sub(/-/,'_'), rand(1000000)))
     @host.find_empty_ip_adress
@@ -74,28 +74,27 @@ class UsersController < ApplicationController
       render :action => :index and return
     end
 
-    if !@user.adress.nil?
+    if @user.adress
       @other_user = User.find_by_adress(@user.adress)
-      if !@other_user.nil?
-        if params[:adress_conflict] == "new_resident" || params[:adress_conflict] == "old_resident"
+      if @other_user
+        if params[:adress_conflict] == 'new_resident'
           if @user.valid? && @host.valid?
-            @other_user.destroy
             @user.save
             @host.save
             @user.hosts << @host
             Confirmation.email(@user).deliver
             redirect_to status_url
           else
-             render :action => :index
+            render :action => :index and return
           end
-        elsif params[:adress_conflict] == "new_computer"
+        elsif params[:adress_conflict] == 'new_computer'
           current_status = @other_user.hosts.first.hostflag.flag.id
           @host.save
           @host.hostflag.flag_id = current_status
           @other_user.hosts.destroy_all
           @other_user.hosts << @host
           redirect_to status_url
-        elsif params[:adress_conflict] == "add_computer"
+        elsif params[:adress_conflict] == 'add_computer'
           current_status = @other_user.hosts.first.hostflag.flag.id
           @host.save
           @host.hostflag.flag_id = current_status
@@ -106,17 +105,14 @@ class UsersController < ApplicationController
           @user.valid?
           render :action => :index and return
         end
-      end
-    else
-      if @user.valid? && @host.valid?
+      elsif @user.valid? && @host.valid?
         @user.save
         @host.save
         @user.hosts << @host
         Confirmation.email(@user).deliver
         redirect_to status_url
-      else
-         render :action => :index
       end
     end
+    render :action => :index
   end
 end

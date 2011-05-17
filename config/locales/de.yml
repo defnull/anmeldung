@@ -49,6 +49,7 @@ de:
     faq_wrong_data_personal: "Falsche persönliche Angaben: Auch diese kannst du auf der Bestätigungs- oder der Statusseite ändern."
     faq_wrong_data_address: "Falsche Adresse: Sprich mit den Internettutoren und entschuldige dich bei der Person, die du gerade vom Internet getrennt hast!"
     faq_wrong_data_purpose: "Falls du absichtlich falsche Daten eingegeben hast: Wir finden das heraus. Und da dies einen Verstoß gegen die Nutzungsregeln darstellt, wirst du vom Internet getrennt. Permanent."
+    or: "ODER"
   user:
     adress:
       not_a_valid_house_or_room_nr: "Haus- und Zimmernummer müssen gültig sein!"
@@ -87,6 +88,10 @@ de:
   email:
     welcome: "Willkommen im Rosenbachweg!"
     resent: "Die Bestätigungs-E-Mail wurde erneut versendet!"
+    one_click_away: "Dein Internetzugang ist nur noch einen Click entfernt!"
+    click_me: "Click mich!"
+    your_pin_is: "Deine PIN ist:"
+    need_to_return_to_the_main_page_question: "Falls du jemals einen weiteren PC hinzufügen willst oder deine persönlichen Angaben korrigieren willst, benutze diesen Link:"
   confirm:
     correct_pin: "Die PIN wurde akzeptiert!"
     wrong_pin: "Sorry, falsche PIN!"
