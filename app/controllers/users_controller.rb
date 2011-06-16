@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       flag = Flag.find_by_species('valid')
       user = @host.user
       user.hosts.each do |host|
-        if host.hostflag.flag.species = 'preliminary'
+        if host.hostflag.flag.species = 'limited'
           host.hostflag.flag=(flag)
           host.hostflag.save
         end
@@ -83,23 +83,18 @@ class UsersController < ApplicationController
             @host.save
             @user.hosts << @host
             Confirmation.email(@user).deliver
-            redirect_to status_url
+            redirect_to status_url and return
           else
             render :action => :index and return
           end
-        elsif params[:adress_conflict] == 'new_computer'
+        elsif params[:adress_conflict] == 'add_computer' || params[:adress_conflict] == 'new_computer'
           current_status = @other_user.hosts.first.hostflag.flag.id
           @host.save
-          @host.hostflag.flag_id = current_status
-          @other_user.hosts.destroy_all
+          hostflag = @host.hostflag
+          hostflag.flag_id = current_status
+          hostflag.save
           @other_user.hosts << @host
-          redirect_to status_url
-        elsif params[:adress_conflict] == 'add_computer'
-          current_status = @other_user.hosts.first.hostflag.flag.id
-          @host.save
-          @host.hostflag.flag_id = current_status
-          @other_user.hosts << @host
-          redirect_to status_url
+          redirect_to status_url and return
         else
           @adress_conflict = true
           @user.valid?
@@ -110,9 +105,10 @@ class UsersController < ApplicationController
         @host.save
         @user.hosts << @host
         Confirmation.email(@user).deliver
-        redirect_to status_url
+        redirect_to status_url and return
       end
     end
+    @user.errors.add(:adress, "is invalid!")
     render :action => :index
   end
 end

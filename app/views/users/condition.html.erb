@@ -1,4 +1,6 @@
-<% if @host.hostflag.flag.species == "preliminary" %>
+<%= link_to "Deutsch <img src='/images/de.png' />".html_safe, status_url(:locale => "de") %> |
+<%= link_to "English <img src='/images/gb.png' />".html_safe, status_url(:locale => "en") %>
+<% if @host.hostflag.flag.species == "limited" %>
     <%= render :partial => 'preliminary_status' %>
 <% elsif @host.hostflag.flag.species == "valid" || @host.hostflag.flag.species == "admin" %>
     <%= render :partial => 'confirmed_status' %>
