@@ -85,6 +85,7 @@ de:
     click_to_send_email: "Click hier, um die E-Mail noch einmal zu versenden!"
     you_have_to_get_a_new_ip_adress: "Du musst eine neue IP-Adresse erhalten!"
     either_reboot_or_unplug: "Dafür musst du deinen Computer rebooten oder kurz das Netzwerkkabel rausziehen."
+    updates_all_ten_minutes: "Die Routing-Tabellen werden alle zehn(10) Minuten aktualisiert. Wenn also nach dem Reboot diese Meldung weiterhin zu sehen ist, bitte zehn(10) Minuten warten und es erneut versuchen!"
   email:
     welcome: "Willkommen im Rosenbachweg!"
     resent: "Die Bestätigungs-E-Mail wurde erneut versendet!"

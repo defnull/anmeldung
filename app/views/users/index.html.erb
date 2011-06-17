@@ -23,7 +23,7 @@
           <table>
             <% if @adress_conflict %>
                 <tr>
-                  <td colspan="3" class="error"><%= t 'conflict.adress_in_use1' %><%= "#{@other_user.lastname}, #{@other_user.firstname}" %></td>
+                  <td colspan="3" class='ui-state-error ui-corner-all'><%= t 'conflict.adress_in_use1' %><%= "#{@other_user.lastname}, #{@other_user.firstname}" %></td>
                 </tr>
                 <tr>
                   <td colspan="3"><%= t 'conflict.adress_in_use2' %></td>

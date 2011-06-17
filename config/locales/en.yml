@@ -74,6 +74,7 @@ en:
     click_to_send_email: "Click here to resend the email!"
     you_have_to_get_a_new_ip_adress: "You have to acquire a new IP address!"
     either_reboot_or_unplug: "To do so, either reboot your computer or unplug the network cable."
+    updates_all_ten_minutes: "The routing tables are refreshed every ten(10) minutes. If you still see this message after rebooting or unplugging please wait for ten(10) minutes, then try again."
   email:
     welcome: "Welcome to the Rosenbachweg!"
     resent: "The confirmation email has been re-sent!"
