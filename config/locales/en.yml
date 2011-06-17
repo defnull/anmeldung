@@ -45,11 +45,12 @@ en:
     wohnung2: "Wohnung 2"
     faq_wrong_data_question: "What happens if I enter wrong data?"
     faq_wrong_data_answer: "If you entered wrong data by accident, there are several possibilities:"
-    faq_wrong_data_email: "Wrong email address: Simply enter the correct email adress on the confirmation screen."
-    faq_wrong_data_personal: "Wrong personal data: You can change that on the confirmation screen or the status screen as well."
-    faq_wrong_data_address: "Wrong address: Talk to the internet tutors and apologize to the person you just disconnected!"
+    faq_wrong_data_email: "Wrong email address: Simply enter the correct email adress on the confirmation or the status screen."
+    faq_wrong_data_personal: "Wrong personal data: You can change that on the confirmation or the status screen as well."
+    faq_wrong_data_address: "Wrong address: Talk to the internet tutors."
     faq_wrong_data_purpose: "If you entered wrong data on purpose: We will find out. And since that behaviour is a breach of policy, you will be disconnected from the internet. Permanently."
     or: "OR"
+    faq_additional_answer2: "Simply enter that computer's MAC address into the form above. Alternatively, connect that computer to our network, enter your data again and choose the corresponding option when prompted."
   user:
     adress:
       not_a_valid_house_or_room_nr: "House and room number have to be valid!"
