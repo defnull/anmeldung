@@ -4,6 +4,7 @@
 <% if flash[:error] %>
     <div class='ui-state-error ui-corner-all' style="padding:0.7em;"><span class="ui-icon ui-icon-alert" style="float:left; margin-right: .3em"></span><%= flash[:error] %></div>
 <% end %>
+<%= user_has_to_reboot %>
 <div class="ui-widget ui-widget-content ui-corner-all" style="padding: 15px; margin-top:10px;">
     <h2><%= t 'prelim.your_info' %></h2>
     <p>
