@@ -1,7 +1,7 @@
 module UsersHelper
   def user_has_to_reboot
     if request.remote_ip.split(".")[2].to_i == 8
-      note = "<div class='ui-state-error ui-corner-all'>"
+      note = "<div class='ui-state-error ui-corner-all' style='padding:10px;'>"
       note += "<h1>"
       note += t 'prelim.you_have_to_get_a_new_ip_adress'
       note += "</h1><h2>"

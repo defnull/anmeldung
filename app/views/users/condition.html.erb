@@ -1,5 +1,7 @@
-<%= link_to "Deutsch <img src='/images/de.png' />".html_safe, status_url(:locale => "de") %> |
-<%= link_to "English <img src='/images/gb.png' />".html_safe, status_url(:locale => "en") %>
+<div class="ui-widget ui-widget-content ui-corner-all" style="padding: 5px;">
+    <%= link_to "Deutsch <img src='/images/de.png' />".html_safe, status_url(:locale => "de") %> |
+    <%= link_to "English <img src='/images/gb.png' />".html_safe, status_url(:locale => "en") %>
+</div>
 <% if @host.hostflag.flag.species == "limited" %>
     <%= render :partial => 'preliminary_status' %>
 <% elsif @host.hostflag.flag.species == "valid" || @host.hostflag.flag.species == "admin" %>

@@ -1,6 +1,6 @@
 <div class="ui-widget ui-widget-content ui-corner-all" style="padding: 5px;">
-    <%= link_to "Deutsch <img src='/images/de.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "de", :host=>"10.10.8.1") : index_url(:locale => "de") %> |
-    <%= link_to "English <img src='/images/gb.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "en", :host=>"10.10.8.1") : index_url(:locale => "en") %>
+    <%= link_to "Deutsch <img src='http://10.10.8.1/images/de.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "de", :host=>"10.10.8.1") : index_url(:locale => "de") %> |
+    <%= link_to "English <img src='http://10.10.8.1/images/gb.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "en", :host=>"10.10.8.1") : index_url(:locale => "en") %>
 </div>
 <div id="content">
   <div class="ui-widget ui-widget-content ui-corner-all" style="padding: 15px; margin-top:10px;">
