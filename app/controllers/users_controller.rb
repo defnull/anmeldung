@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     @user = User.new(:firstname => params[:firstname], :lastname => params[:lastname], :email => params[:email], :account => params[:account], :pin => rand(1000000))
     @user.assemble_adress(params[:house],params[:room],params[:special_room])
 
-    @host = Host.new(:mac => mac, :hostname => sprintf("%s_%d",(@user.adress.nil?) ? '' : @user.adress.sub(/-/,'_'), rand(1000000)))
+    @host = Host.new(:mac => mac, :hostname => sprintf("%sx%d",(@user.adress.nil?) ? '' : @user.adress.sub(/-/,'x'), rand(1000000)))
     @host.find_empty_ip_adress
 
     if @host.ip.nil?

@@ -17,15 +17,16 @@ class Host < ActiveRecord::Base
     #a free IP adress.
     #If none is available , the ip-Value will be left nil which prompts a corresponding message to the user, namely
     #that the adress pool is exhausted and they'll have to talk to a administrator
-    #10.10.9.0 is addressed as 2304 in ip_numeric (9*256)
+    #10.10.9.0 is addressed as 168429824 in ip_numeric (9*256+10*256^2+10*256^3)
 
-    if !Host.exists?(:ip_numeric => 2304)
-      self.ip_numeric = 2304
+    if !Host.exists?(:ip_numeric => 168429824)
+      self.ip_numeric = 168429824
     else
-      sql = "SELECT l.ip_numeric+1 AS start FROM hosts AS l LEFT OUTER JOIN hosts AS r ON l.ip_numeric+1 = r.ip_numeric WHERE r.ip_numeric IS NULL AND l.ip_numeric >= 2304 AND l.ip_numeric < 4096 LIMIT 1;"
+      sql = "SELECT l.ip_numeric+1 AS start FROM hosts AS l LEFT OUTER JOIN hosts AS r ON l.ip_numeric+1 = r.ip_numeric WHERE r.ip_numeric IS NULL AND l.ip_numeric >= 168429824 AND l.ip_numeric < 168431615 LIMIT 1;"
       self.ip_numeric = Host.connection.select_value(sql)
     end
-    self.ip = (self.ip_numeric.nil?) ? nil : sprintf("10.10.%d.%d",self.ip_numeric.divmod(256)[0],self.ip_numeric.divmod(256)[1])
+    temp_num = ip_numeric - (256*256*256*10) - (256*256*10)
+    self.ip = (self.ip_numeric.nil?) ? nil : sprintf("10.10.%d.%d",self.temp_num.divmod(256)[0],self.temp_num.divmod(256)[1])
   end
 
   private

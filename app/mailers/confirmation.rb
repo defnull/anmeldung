@@ -8,6 +8,6 @@ class Confirmation < ActionMailer::Base
     recipients  user.email
     from        'inet@rbw.goe.net'
     sent_on     Time.now
-    body        :firstname => user.firstname, :lastname => user.lastname, :pin => user.pin, :confirm_url => confirm_url(:locale=>I18n.locale,:pin => user.pin)
+    body        :firstname => user.firstname.html_safe, :lastname => user.lastname.html_safe, :pin => user.pin, :confirm_url => confirm_url(:locale=>I18n.locale,:pin => user.pin).html_safe
   end
 end
