@@ -26,7 +26,7 @@ class Host < ActiveRecord::Base
       self.ip_numeric = Host.connection.select_value(sql)
     end
     temp_num = ip_numeric - (256*256*256*10) - (256*256*10)
-    self.ip = (self.ip_numeric.nil?) ? nil : sprintf("10.10.%d.%d",self.temp_num.divmod(256)[0],self.temp_num.divmod(256)[1])
+    self.ip = (self.ip_numeric.nil?) ? nil : sprintf("10.10.%d.%d",temp_num.divmod(256)[0],temp_num.divmod(256)[1])
   end
 
   private

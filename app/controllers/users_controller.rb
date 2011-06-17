@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def index
-    @host = (Rails.env == "production") ? "10.10.8.1" : "127.0.0.1"
+    #@host = (Rails.env == "production") ? "10.10.8.1" : nil
     mac = get_remote_mac
     if Host.exists?(:mac => mac)
       redirect_to status_url
