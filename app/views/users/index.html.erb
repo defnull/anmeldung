@@ -1,5 +1,5 @@
-<%= link_to "Deutsch <img src='/images/de.png' />".html_safe, index_url(:locale => "de") %> |
-<%= link_to "English <img src='/images/gb.png' />".html_safe, index_url(:locale => "en") %>
+<%= link_to "Deutsch <img src='/images/de.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "de", :host=>"10.10.8.1") : index_url(:locale => "de") %> |
+<%= link_to "English <img src='/images/gb.png' />".html_safe, (Rails.env == "production") ? index_url(:locale => "en", :host=>"10.10.8.1") : index_url(:locale => "en") %>
 <div id="content">
     <h1><%= t 'index.welcome' %></h1>
     <h2><%= t 'index.access_question' %></h2>
@@ -14,7 +14,7 @@
     <p><%= t 'index.did_already_answer' %></p>
     <h2><%= t 'index.enter_information' %></h2>
     <p>
-      <%= form_tag( create_url ) do -%>
+      <%= form_tag( (Rails.env == "production") ? create_url(:host => "10.10.8.1") : create_url ) do -%>
           <table>
             <% if @adress_conflict %>
                 <tr>
