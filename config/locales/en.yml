@@ -5,7 +5,7 @@ en:
     access_answer: "If you are seeing this page it means that your computer is already correctly configured to access the internet. Please read the following closely to gain full access:"
     access_answer_1: "Fill out the form below and take care to enter a"
     access_answer_2: "valid email adress!"
-    access_answer_3: "After your entries are accepted, you will gain access to web pages (i.e. Port 80, 443). This means that web browsers like Firefox, Opera while programs like Skype or World of Warcraft will not."
+    access_answer_3: "After your entries are accepted, you will gain access to web pages (i.e. Port 80, 443). This means that web browsers like Firefox, Opera will work while programs like Skype or World of Warcraft will not."
     access_answer_4: "You will then receive an e-mail which contains a link you will have to click in order to confirm your e-mail address (alternatively you can use the included PIN and revisit this page). Upon confirmation of your e-mail address you will gain full access to the internet. You will have to access your emails by using your webbrowser."
     did_already_question: "But I already did all this / How do I register a new computer?"
     did_already_answer: "Please refer to the FAQ below the form."
