@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   
   def index
-    #@host = (Rails.env == "production") ? "10.10.8.1" : nil
     mac = get_remote_mac
     if Host.exists?(:mac => mac)
       redirect_to status_url
@@ -108,8 +107,9 @@ class UsersController < ApplicationController
         Confirmation.email(@user).deliver
         redirect_to status_url and return
       end
+    else
+      @user.errors.add(:adress, "is invalid!")
     end
-    @user.errors.add(:adress, "is invalid!")
     render :action => :index
   end
 end
