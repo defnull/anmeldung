@@ -1,5 +1,5 @@
 <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+    <div class="ui-state-highlight ui-corner-all" style="padding:0.7em"><span class="ui-icon ui-icon-info" style="float:left; margin-right:.3em"></span><%= flash[:notice] %></div>
 <% end %>
 <% if flash[:error] %>
     <div class='ui-state-error ui-corner-all' style="padding:0.7em;"><span class="ui-icon ui-icon-alert" style="float:left; margin-right: .3em"></span><%= flash[:error] %></div>
