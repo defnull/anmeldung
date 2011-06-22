@@ -85,8 +85,9 @@ de:
     check_your_data: "Bitte prüfe erst, ob deine Angaben oben korrekt sind. Ansonsten kannst du durch den unteren Link die E-Mail noch einmal versenden."
     click_to_send_email: "Click hier, um die E-Mail noch einmal zu versenden!"
     you_have_to_get_a_new_ip_adress: "Du musst eine neue IP-Adresse erhalten!"
-    either_reboot_or_unplug: "Dafür musst du deinen Computer rebooten oder kurz das Netzwerkkabel rausziehen."
-    updates_all_ten_minutes: "Die Routing-Tabellen werden alle zehn(10) Minuten aktualisiert. Wenn also nach dem Reboot diese Meldung weiterhin zu sehen ist, bitte zehn(10) Minuten warten und es erneut versuchen!"
+    either_reboot_or_unplug: "Dafür musst du deinen Computer rebooten, sobald der Countdown durchgelaufen ist."
+    updates_all_ten_minutes: "Die Routing-Tabellen werden alle 10(zehn) Minuten aktualisiert. Wenn also nach dem Reboot diese Meldung weiterhin zu sehen ist, bitte weitere 10(zehn) Minuten warten und es erneut versuchen!"
+    time_till_next_update: "Zeit bis zum nächsten Router-Update:"
   email:
     welcome: "Willkommen im Rosenbachweg!"
     resent: "Die Bestätigungs-E-Mail wurde erneut versendet!"
@@ -100,6 +101,8 @@ de:
     list_of_computers: "Deine angemeldeten Computer:"
     add_computer: "Ergänze einen weiteren Computer:"
     enter_mac_address: "Gib eine MAC-Adresse ein:"
+    mac_example: "Beispiel für eine MAC-Adresse"
+    mac_format: "Striche, Doppelpunkte und ähnliches weglassen"
   host:
     adding_new_computer_not_possible_at_this_time: "Es ist zur Zeit nicht möglich, einen weiteren Computer hinzuzufügen."
     new_computer_added: "Neuer Computer erfolgreich hinzugefügt."

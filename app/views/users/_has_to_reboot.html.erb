@@ -1,0 +1,21 @@
+<% current = Time.now
+   time_left = 600-(current.min%10*60+current.sec)
+%>
+<div class='ui-state-error ui-corner-all' style='padding:10px;'>
+  <h1>
+    <%= t 'prelim.you_have_to_get_a_new_ip_adress' %>
+  </h1>
+  <h2>
+    <%= t 'prelim.either_reboot_or_unplug' %>
+  </h2>
+  <h2>
+    <%= t 'prelim.updates_all_ten_minutes' %>
+  </h2>
+  <h2>
+    <%= t 'prelim.time_till_next_update' %> <span id="timer_display"><%= "#{9-current.min%10} minutes, #{60-current.sec} seconds" %></span>
+  </h2>
+</div>
+<script type="text/javascript">
+  var time_left = <%= time_left %>;
+  display_time_to_reboot();
+</script>

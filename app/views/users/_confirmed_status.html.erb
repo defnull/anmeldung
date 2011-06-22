@@ -24,7 +24,7 @@
           </tr>
           <tr>
             <td><%= t 'index.account' %></td>
-            <td><%= email_field_tag 'account', @host.user.account, :placeholder => t('index.account_suggestion'), :size => 40 %></td>
+            <td><%= email_field_tag 'account', @host.user.account, :placeholder => t('index.account_suggestion'), :size => 40 %> <%= t 'index.account_not_required' %></td>
           </tr>
           <tr>
             <td colspan="2" align="center"><%= submit_tag t('index.submit'), :class => "submit" %></td>
@@ -52,14 +52,14 @@
       <%= form_tag( add_host_url ) do %>
         <table>
             <tr>
-              <td colspan="2"><%= t 'confirm.enter_mac_address' %></td>
+              <td colspan="3"><%= t 'confirm.enter_mac_address' %></td>
             </tr>
             <tr>
               <td>MAC:</td>
-              <td><%= text_field_tag 'mac', nil, :placeholder => '001122334455', :size => 17 %></td>
+              <td><%= text_field_tag 'mac', nil, :placeholder => '001122334455', :size => 17 %></td><td><em>(<%= t 'confirm.mac_example' %>: 0011aa22cc33,<br /><%= t 'confirm.mac_format' %>)</em></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><%= submit_tag t('index.submit'), :class=>"submit" %></td>
+                <td colspan="3" align="center"><%= submit_tag t('index.submit'), :class=>"submit" %></td>
             </tr>
         </table>
       <% end -%>

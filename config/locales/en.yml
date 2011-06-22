@@ -74,8 +74,9 @@ en:
     check_your_data: "Please check first if your personal information above is indeed correct. Then you can resend the email by clicking the link below."
     click_to_send_email: "Click here to resend the email!"
     you_have_to_get_a_new_ip_adress: "You have to acquire a new IP address!"
-    either_reboot_or_unplug: "To do so, either reboot your computer or unplug the network cable."
-    updates_all_ten_minutes: "The routing tables are refreshed every ten(10) minutes. If you still see this message after rebooting or unplugging please wait for ten(10) minutes, then try again."
+    either_reboot_or_unplug: "To do so, reboot your computer after the countdown has run its course once."
+    updates_all_ten_minutes: "The routing tables are refreshed every 10(ten) minutes. If you still see this message after rebooting or unplugging please wait for additional 10(ten) minutes, then try again."
+    time_till_next_update: "Time till next router update:"
   email:
     welcome: "Welcome to the Rosenbachweg!"
     resent: "The confirmation email has been re-sent!"
@@ -89,6 +90,8 @@ en:
     list_of_computers: "List of your computers:"
     add_computer: "Add another computer:"
     enter_mac_address: "Enter a MAC address:"
+    mac_example: "Example for a MAC address"
+    mac_format: "leave out dots, dashes and the like"
   host:
     adding_new_computer_not_possible_at_this_time: "It is not possible to add an additional computer at this time."
     new_computer_added: "New computer successfully added."
